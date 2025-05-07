@@ -1,4 +1,4 @@
-package lii.hospitalmanagementsystem;
+package lii.hospitalmanagementsystem.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

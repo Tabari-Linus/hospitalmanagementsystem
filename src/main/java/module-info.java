@@ -12,4 +12,6 @@ module lii.hospitalmanagementsystem {
 
     opens lii.hospitalmanagementsystem to javafx.fxml;
     exports lii.hospitalmanagementsystem;
+    exports lii.hospitalmanagementsystem.controller;
+    opens lii.hospitalmanagementsystem.controller to javafx.fxml;
 }
