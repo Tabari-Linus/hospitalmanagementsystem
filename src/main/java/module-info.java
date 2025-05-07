@@ -9,6 +9,7 @@ module lii.hospitalmanagementsystem {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
     opens lii.hospitalmanagementsystem to javafx.fxml;
     exports lii.hospitalmanagementsystem;
