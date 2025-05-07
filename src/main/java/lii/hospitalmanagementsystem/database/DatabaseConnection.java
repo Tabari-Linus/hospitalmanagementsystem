@@ -23,5 +23,18 @@ public class DatabaseConnection {
         return connection;
     }
 
+    /**
+     * This method closes the database connection.
+     * @param connection The Connection object to be closed.
+     */
+    public static void closeConnection(Connection connection) {
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (Exception e) {
+                System.out.println("Error closing the database connection: " + e.getMessage());
+            }
+        }
+    }
 
 }
