@@ -1,4 +1,4 @@
-package lii.hospitalmanagementsystem.database;
+package lii.hospitalmanagementsystem.databasecrud;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
