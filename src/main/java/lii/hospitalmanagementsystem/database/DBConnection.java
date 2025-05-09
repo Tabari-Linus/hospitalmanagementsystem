@@ -3,7 +3,7 @@ package lii.hospitalmanagementsystem.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DatabaseConnection {
+public class DBConnection {
 
     private static final String URL = "jdbc:postgresql://localhost:5432/hospital_db";
     private static final String USER = "postgres";
