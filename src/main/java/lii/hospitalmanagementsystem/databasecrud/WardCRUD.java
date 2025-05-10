@@ -1,6 +1,6 @@
 package lii.hospitalmanagementsystem.databasecrud;
 
-import lii.hospitaltrial.model.Ward;
+import lii.hospitalmanagementsystem.model.Ward;
 
 import java.sql.*;
 import java.util.ArrayList;
