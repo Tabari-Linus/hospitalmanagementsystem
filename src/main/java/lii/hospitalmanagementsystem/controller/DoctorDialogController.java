@@ -1,13 +1,13 @@
-package lii.hospitaltrial.controller;
+package lii.hospitalmanagementsystem.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import lii.hospitaltrial.model.Doctor;
-import lii.hospitaltrial.model.Employee;
-import lii.hospitaltrial.model.Speciality;
-import lii.hospitaltrial.databasecrud.EmployeeCRUD;
-import lii.hospitaltrial.databasecrud.SpecialityCRUD;
+import lii.hospitalmanagementsystem.model.Doctor;
+import lii.hospitalmanagementsystem.model.Employee;
+import lii.hospitalmanagementsystem.model.Speciality;
+import lii.hospitalmanagementsystem.databasecrud.EmployeeCRUD;
+import lii.hospitalmanagementsystem.databasecrud.SpecialityCRUD;
 
 public class DoctorDialogController {
     @FXML private TextField employeeIdField;
