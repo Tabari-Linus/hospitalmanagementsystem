@@ -106,7 +106,7 @@ public class PatientsController {
 
     private void showPatientDialog(PatientView patientView) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitaltrial/view/PatientDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitalmanagementsystem/view/PatientDialog.fxml"));
             Stage dialogStage = new Stage();
             dialogStage.initModality(Modality.APPLICATION_MODAL);
             dialogStage.setTitle(patientView == null ? "Add Patient" : "Edit Patient");
@@ -123,10 +123,10 @@ public class PatientsController {
                 );
                 controller.setPatient(patient);
             } else {
-                // For new patients, let the database handle ID generation
+
                 Patient newPatient = new Patient();
                 controller.setPatient(newPatient);
-                controller.hidePatientIdField(); // Hide ID field for new patients
+                controller.hidePatientIdField();
             }
 
             dialogStage.showAndWait();
@@ -140,7 +140,7 @@ public class PatientsController {
                         patientCRUD.updatePatient(patient);
                     }
                     loadPatients();
-                } catch (RuntimeException e) {  // Changed to RuntimeException
+                } catch (RuntimeException e) {
                     showError("Database Error", "Failed to save patient: " + e.getMessage());
                 }
             }
