@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lii.hospitalmanagementsystem.controller.DashboardController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <Label styleClass="page-title" text="Dashboard Overview" />
+
+    <GridPane hgap="20" vgap="20" GridPane.hgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="100" prefWidth="200" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="100" prefHeight="150" vgrow="ALWAYS" />
+            <RowConstraints minHeight="100" prefHeight="150" vgrow="ALWAYS" />
+        </rowConstraints>
+
+
+        <StackPane onMouseClicked="#handleDoctorsClick" styleClass="dashboard-card doctors-card" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+            <VBox alignment="CENTER" opacity="0.47" spacing="10" style="-fx-background-color: #191970; -fx-background-radius: 5;">
+                <Label fx:id="totalDoctors" styleClass="dashboard-number" text="0" />
+                <Label styleClass="dashboard-label" text="Total Doctors" />
+            </VBox>
+        </StackPane>
+
+
+        <VBox alignment="CENTER" opacity="0.81" style="-fx-background-color: #191970; -fx-background-radius: 5;" styleClass="dashboard-card nurses-card" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+            <Label fx:id="totalNurses" styleClass="dashboard-number" text="0" />
+            <Label styleClass="dashboard-label" text="Total Nurses" />
+        </VBox>
+
+        <VBox alignment="CENTER" style="-fx-background-color: #191970; -fx-background-radius: 5;" styleClass="dashboard-card patients-card" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+            <Label fx:id="totalPatients" styleClass="dashboard-number" text="0" />
+            <Label styleClass="dashboard-label" text="Total Patients" />
+        </VBox>
+
+
+        <VBox alignment="CENTER" opacity="0.47" style="-fx-background-color: #191970; -fx-background-radius: 5;" styleClass="dashboard-card departments-card" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <Label fx:id="totalDepartments" styleClass="dashboard-number" text="0" />
+            <Label styleClass="dashboard-label" text="Departments" />
+        </VBox>
+
+
+        <VBox alignment="CENTER" opacity="0.81" style="-fx-background-color: #191970; -fx-background-radius: 5;" styleClass="dashboard-card wards-card" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <Label fx:id="totalWards" styleClass="dashboard-number" text="0" />
+            <Label styleClass="dashboard-label" text="Total Wards" />
+        </VBox>
+
+
+        <VBox alignment="CENTER" style="-fx-background-color: #191970; -fx-background-radius: 5;" styleClass="dashboard-card admissions-card" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+            <Label fx:id="totalAdmissions" styleClass="dashboard-number" text="0" />
+            <Label styleClass="dashboard-label" text="Current Admissions" />
+        </VBox>
+    </GridPane>
+
+    <Label styleClass="section-title" text="Current Patient Admissions" />
+    <TableView fx:id="patientTableView" styleClass="dashboard-table">
+        <columns>
+            <TableColumn fx:id="patientIdCol" text="Patient ID" prefWidth="100"/>
+            <TableColumn fx:id="patientNameCol" text="Patient Name" prefWidth="200"/>
+            <TableColumn fx:id="wardNumberCol" text="Ward Number" prefWidth="100"/>
+            <TableColumn fx:id="doctorNameCol" text="Diagnosing Doctor" prefWidth="200"/>
+            <TableColumn fx:id="diagnosisCol" text="Diagnosis" prefWidth="250"/>
+            <TableColumn fx:id="admissionDateCol" text="Admission Date" prefWidth="150"/>
+        </columns>
+    </TableView>
+</VBox>
