@@ -21,7 +21,7 @@ public class MainDashboardController {
     @FXML
     private void initialize() {
         setupNavigation();
-        loadPage("Dashboard"); // Load Dashboard.fxml initially
+        loadPage("Dashboard");
     }
 
 
@@ -38,11 +38,11 @@ public class MainDashboardController {
     public void loadPage(String page) {
         try {
             if (page == "Dashboard") {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitaltrial/view/Dashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitalmanagementsystem/view/Dashboard.fxml"));
                 Parent dashboard = loader.load();
                 contentArea.getChildren().setAll(dashboard);
             }else{
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitaltrial/view/" + page + ".fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitalmanagementsystem/view/" + page + ".fxml"));
                 Node pageContent = loader.load();
                 contentArea.getChildren().setAll(pageContent);}
         } catch (Exception e) {
