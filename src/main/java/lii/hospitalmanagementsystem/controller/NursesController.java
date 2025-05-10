@@ -221,7 +221,6 @@ public class NursesController {
                 loadNurses();
             }
         } catch (Exception e) {
-            e.printStackTrace();
             showAlert("Error", "Failed to save nurse: " + e.getMessage());
         }
     }
