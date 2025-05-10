@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+
+<HBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lii.hospitalmanagementsystem.controller.MainDashboardController">
+    <VBox styleClass="sidebar">
+        <Label text="Hospital MS" styleClass="sidebar-title"/>
+
+        <Button fx:id="dashboardBtn" text="Dashboard" styleClass="nav-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="DASHBOARD"/>
+            </graphic>
+        </Button>
+
+        <Button fx:id="doctorsBtn" text="Doctors" styleClass="nav-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="USER_MD"/>
+            </graphic>
+        </Button>
+
+        <Button fx:id="nursesBtn" text="Nurses" styleClass="nav-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="USER"/>
+            </graphic>
+        </Button>
+
+        <Button fx:id="patientsBtn" text="Patients" styleClass="nav-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="USERS"/>
+            </graphic>
+        </Button>
+
+        <Button fx:id="departmentsBtn" text="Departments" styleClass="nav-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="BUILDING"/>
+            </graphic>
+        </Button>
+
+        <Button fx:id="operationsBtn" text="Operations" styleClass="nav-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="STETHOSCOPE"/>
+            </graphic>
+        </Button>
+    </VBox>
+
+    <StackPane fx:id="contentArea" HBox.hgrow="ALWAYS"/>
+</HBox>
