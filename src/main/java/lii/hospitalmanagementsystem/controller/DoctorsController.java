@@ -229,7 +229,7 @@ public class DoctorsController {
 
     private void showDoctorDialog(DoctorView doctorView) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitaltrial/view/DoctorDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitalmanagementsystem/view/DoctorDialog.fxml"));
             Stage dialogStage = new Stage();
             dialogStage.initModality(Modality.APPLICATION_MODAL);
             dialogStage.setTitle(doctorView == null ? "Add Doctor" : "Edit Doctor");
