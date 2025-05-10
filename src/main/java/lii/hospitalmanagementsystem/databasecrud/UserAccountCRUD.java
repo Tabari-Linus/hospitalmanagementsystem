@@ -1,6 +1,6 @@
 package lii.hospitalmanagementsystem.databasecrud;
 
-import lii.hospitaltrial.model.UserAccount;
+import lii.hospitalmanagementsystem.model.UserAccount;
 
 import java.sql.*;
 import java.util.ArrayList;

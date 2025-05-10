@@ -186,7 +186,7 @@ public class NursesController {
 
     private void showNurseDialog(NurseView nurseView) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitaltrial/view/NurseDialog.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/lii/hospitalmanagementsystem/view/NurseDialog.fxml"));
             Stage dialogStage = new Stage();
             dialogStage.initModality(Modality.APPLICATION_MODAL);
             dialogStage.setTitle(nurseView == null ? "Add Nurse" : "Edit Nurse");

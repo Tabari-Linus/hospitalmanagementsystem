@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lii.hospitalmanagementsystem.controller.NursesController"
+      styleClass="content-page">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <Label text="Nurses Management" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Search nurses..."
+                   styleClass="search-field"/>
+        <Button fx:id="addNurseBtn" text="Add New Nurse"
+                styleClass="action-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="PLUS"/>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <HBox fx:id="summaryContainer" spacing="20">
+        <padding>
+            <Insets bottom="20"/>
+        </padding>
+    </HBox>
+
+    <TableView fx:id="nursesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="80"/>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="addressColumn" text="Address" prefWidth="200"/>
+            <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="120"/>
+            <TableColumn fx:id="rotationColumn" text="Rotation" prefWidth="100"/>
+            <TableColumn fx:id="departmentColumn" text="Department" prefWidth="150"/>
+            <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="120"/>
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+    </TableView>
+</VBox>
