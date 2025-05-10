@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lii.hospitalmanagementsystem.controller.DoctorsController"
+      styleClass="content-page">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <Label text="Doctors Management" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Search doctors..."
+                   styleClass="search-field"/>
+        <Button fx:id="addDoctorBtn" text="Add New Doctor"
+                styleClass="action-button">
+            <graphic>
+                <FontAwesomeIconView glyphName="PLUS"/>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <HBox fx:id="summaryContainer" spacing="20">
+        <padding>
+            <Insets bottom="20"/>
+        </padding>
+    </HBox>
+    <TableView fx:id="doctorsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="${doctorsTable.width * 0.1}"/>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="${doctorsTable.width * 0.2}"/>
+            <TableColumn fx:id="addressColumn" text="Address" prefWidth="${doctorsTable.width * 0.25}"/>
+            <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="${doctorsTable.width * 0.15}"/>
+            <TableColumn fx:id="specialityColumn" text="Speciality" prefWidth="${doctorsTable.width * 0.15}"/>
+            <TableColumn fx:id="actionsColumn" text="Actions" prefWidth="${doctorsTable.width * 0.15}"/>
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+    </TableView>
+</VBox>
