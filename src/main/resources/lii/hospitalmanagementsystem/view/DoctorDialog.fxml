@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
+      fx:controller="lii.hospitalmanagementsystem.controller.DoctorDialogController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <Label text="Employee ID:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="employeeIdField" GridPane.columnIndex="1" GridPane.rowIndex="0" disable="true"/>
+
+        <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Surname:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="surnameField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Telephone No:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="telephoneNoField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Speciality:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <ComboBox fx:id="specialityComboBox" GridPane.columnIndex="1" GridPane.rowIndex="5" maxWidth="Infinity"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="saveButton" text="Save" defaultButton="true"/>
+        <Button fx:id="cancelButton" text="Cancel" cancelButton="true"/>
+    </HBox>
+</VBox>
